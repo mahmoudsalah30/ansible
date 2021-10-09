@@ -1,0 +1,18 @@
+- 
+   name: playbook1
+   hosts: web 
+   tasks:
+      - name: execute comand 
+        command: date 
+
+      - name: sctipt 
+        script: /root/test/test.sh
+
+      - name: install the latest version of Apache
+        yum:
+         name: httpd
+         state: latest
+      - name : start service 
+        service : 
+         name : httpd 
+         state : started
