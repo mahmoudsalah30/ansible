@@ -1,0 +1,12 @@
+- 
+   name : play2
+   hosts : web
+   tasks :
+        - name: Copy file with owner and permissions
+          copy:
+            src: /etc/hosts
+            dest: /tmp/
+            owner: root
+            group: root
+            mode: '0644'
+ 
