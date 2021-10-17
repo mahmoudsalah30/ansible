@@ -1,0 +1,9 @@
+- 
+   name : play2
+   hosts : web
+   tasks :
+        - name: create file 
+          file:
+            path: /tmp/data/7alawa.txt
+            mode: '0644'
+            state: touch 
